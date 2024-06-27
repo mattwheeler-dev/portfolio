@@ -7,10 +7,8 @@ const moveCircle = (e) => {
 	circle.style.top = `${posY - 20}px`;
 	circle.style.left = `${posX - 20}px`;
 };
-
 window.addEventListener("mousemove", moveCircle);
 
-// CHANGE ACTIVE NAV ITEM BASED ON VIEW POSITION
 // SET NAV ITEM ACTIVE BASED ON PAGE POSITION
 const activeLink = () => {
 	const sections = document.querySelectorAll("section");
@@ -22,7 +20,6 @@ const activeLink = () => {
 	navLinks.forEach((link) => link.classList.remove("active"));
 	navLinks[index].classList.add("active");
 };
-
 activeLink();
 window.addEventListener("scroll", activeLink);
 
