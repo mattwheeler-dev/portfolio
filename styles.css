@@ -381,7 +381,7 @@ nav img {
 }
 
 /* MEDIA QUERIES FOR MOBILE ADJUSTMENTS */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 	/* REMOVE CURSOR CIRCLE */
 	#cursor-circle {
 		display: none;
