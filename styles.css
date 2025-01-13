@@ -1,15 +1,17 @@
-/* GOOGLE FONT IMPORT [ QUICKSAND @ 300 - 700 ] */
+/* Google Font Import [ Quicksand @ 300 - 700 ] */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-/* VARIABLES */
+/* Variables */
 :root {
 	--primary: #03c4ff;
 	--secondary: #12ff8d;
+	--text-light: #fff;
 	--radius: 0.5rem;
 	--shadow: 0 0 0.5rem #000;
+	--transition: all 0.25s ease;
 }
 
-/* GLOBAL DEFAULTS */
+/* Global Defaults */
 * {
 	margin: 0;
 	padding: 0;
@@ -19,23 +21,20 @@
 }
 
 body {
-	height: fit-content;
-	width: 100vw;
-	color: #fff;
+	width: 100dvw;
+	color: var(--text-light);
 	background-color: #202020;
 	overflow-x: hidden;
 }
 
 section {
-	height: fit-content;
-	min-height: 100vh;
-	width: 100%;
+	min-height: 100dvh;
 	max-width: 1100px;
 	margin: 0 auto;
 	padding-top: 4rem;
 }
 
-/* HEADINGS */
+/* Headings */
 h1 {
 	margin: 1rem 0;
 	font-size: 3rem;
@@ -60,7 +59,7 @@ h3 {
 	font-weight: 500;
 }
 
-/* DISPLAY: FLEX; */
+/* All display: flex; */
 nav,
 section,
 .project,
@@ -69,18 +68,19 @@ section,
 	display: flex;
 }
 
-/* NAVBAR */
+/* Navbar */
 nav {
 	height: 3rem;
 	width: 100%;
 	padding: 0 1rem;
 	background-color: #000;
 	border-bottom: 2px solid var(--primary);
+	box-shadow: var(--shadow);
 	position: fixed;
 	top: 0;
 	align-items: center;
 	justify-content: space-between;
-	transition: all 0.25s ease;
+	transition: var(--transition);
 	z-index: 98;
 }
 
@@ -95,8 +95,8 @@ nav img {
 #nav-links a {
 	margin-right: 2rem;
 	text-decoration: none;
-	color: #fff;
-	transition: all 0.2s ease;
+	color: var(--text-light);
+	transition: var(--transition);
 }
 
 #nav-links a:hover {
@@ -108,7 +108,7 @@ nav img {
 	color: var(--primary);
 }
 
-/* HERO SECTION */
+/* Hero section */
 #hero {
 	flex-direction: column;
 	align-items: center;
@@ -120,7 +120,7 @@ nav img {
 
 .fa-code {
 	color: var(--primary);
-	transition: all 0.25s linear;
+	transition: var(--transition);
 }
 
 .fa-code:hover {
@@ -133,7 +133,7 @@ nav img {
 	cursor: pointer;
 	padding: 0.1rem;
 	border-bottom: 1px solid var(--primary);
-	transition: all 0.25s linear;
+	transition: var(--transition);
 }
 
 #interactive:hover,
@@ -180,7 +180,7 @@ nav img {
 	display: block;
 }
 
-/* PROJECTS SECTION */
+/* Projects section */
 #projects {
 	flex-wrap: wrap;
 	position: relative;
@@ -247,13 +247,22 @@ nav img {
 }
 
 .css {
-	color: #fff;
+	color: var(--text-light);
 	background-color: #0d75ba;
 }
 
 .html {
 	color: #000;
 	background-color: #f4632b;
+}
+
+.firebase {
+	color: #000;
+	background: linear-gradient(
+		45deg,
+		rgba(255, 215, 0, 1) 0%,
+		rgba(255, 3, 0, 1) 100%
+	);
 }
 
 .project-links {
@@ -266,10 +275,10 @@ nav img {
 .project-links a {
 	padding: 0.5rem 1rem;
 	text-decoration: none;
-	color: #fff;
+	color: var(--text-light);
 	border: 1px solid var(--primary);
 	border-radius: var(--radius);
-	transition: all 0.2s linear;
+	transition: var(--transition);
 }
 
 .project-links a:hover {
@@ -279,7 +288,7 @@ nav img {
 	scale: 1.1;
 }
 
-/* CONTACT SECTION */
+/* Contact section */
 #contact {
 	max-width: 800px;
 	flex-wrap: wrap;
@@ -319,15 +328,15 @@ nav img {
 	margin: 0 0.5rem;
 	font-size: 1.6rem;
 	text-decoration: none;
-	color: #fff;
-	transition: all 0.2s ease;
+	color: var(--text-light);
+	transition: var(--transition);
 }
 
 #socials a:hover {
 	color: var(--secondary);
 }
 
-/* CUSTOM SCROLLBAR */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
 	width: 1rem;
 }
@@ -344,7 +353,7 @@ nav img {
 	background-color: var(--secondary);
 }
 
-/* CURSOR CIRCLE */
+/* Cursor circle */
 #cursor-circle {
 	height: 40px;
 	width: 40px;
@@ -365,7 +374,7 @@ nav img {
 	left: 16px;
 }
 
-/* ANIMATIONS */
+/* Animations */
 @keyframes vibing {
 	0% {
 		transform: rotateZ(-15deg);
@@ -380,9 +389,9 @@ nav img {
 	}
 }
 
-/* MEDIA QUERIES FOR MOBILE ADJUSTMENTS */
+/* Media queries */
 @media (max-width: 800px) {
-	/* REMOVE CURSOR CIRCLE */
+	/* Remove cursor circle */
 	#cursor-circle {
 		display: none;
 	}
@@ -391,7 +400,7 @@ nav img {
 		padding-top: 3rem;
 	}
 
-	/* HEADINGS */
+	/* Headings */
 	h1 {
 		width: 80%;
 		margin: 1rem auto;
@@ -406,7 +415,7 @@ nav img {
 		font-size: 1.3rem;
 	}
 
-	/* NAVBAR */
+	/* Navbar */
 	nav {
 		height: 2rem;
 		padding-right: 0;
@@ -416,7 +425,7 @@ nav img {
 		font-size: 0.9rem;
 	}
 
-	/* HERO SECTION */
+	/* Hero section */
 	#hero img {
 		height: 250px;
 	}
@@ -447,7 +456,7 @@ nav img {
 		right: 0;
 	}
 
-	/* PROJECTS SECTION */
+	/* Projects section */
 	#work-work {
 		top: 0.5rem;
 		right: 0.5rem;
@@ -472,7 +481,7 @@ nav img {
 		justify-content: space-between;
 	}
 
-	/* CONTACT SECTION */
+	/* Contact section */
 	#contact {
 		flex-direction: column;
 		align-items: center;

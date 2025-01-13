@@ -1,4 +1,4 @@
-// CURSOR FOLLOWING CIRCLE
+// Cursor circle
 const moveCircle = (e) => {
 	const circle = document.querySelector("#cursor-circle");
 	const posY = e.pageY;
@@ -9,7 +9,7 @@ const moveCircle = (e) => {
 };
 window.addEventListener("mousemove", moveCircle);
 
-// SET NAV ITEM ACTIVE BASED ON PAGE POSITION
+// Active nav item based on page position
 const activeLink = () => {
 	const sections = document.querySelectorAll("section");
 	const navLinks = document.querySelectorAll("#nav-links a");
@@ -23,7 +23,7 @@ const activeLink = () => {
 activeLink();
 window.addEventListener("scroll", activeLink);
 
-// INTERACTIVE WORD INTERACTION
+// Interactive word toggle
 const interactive = document.querySelector("#interactive");
 
 interactive.addEventListener("click", () => {
